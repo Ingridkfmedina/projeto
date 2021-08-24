@@ -1,0 +1,430 @@
+:root
+{
+  --base-font-family: "Lato", sans-serif;
+  --base-transition: 600ms cubic-bezier(0.22, 1, 0.19, 1);
+  --base-vertical-rhythm: 1.5rem;
+  --button-bg-color: mediumseagreen;
+  --button-border-radius: 0.15rem;
+  --button-focus-bg-color: seagreen;
+  --button-font-size: 1rem;
+  --button-text-color: white;
+  --input-bg-color: white;
+  --input-border-color: #EAEAEA;
+  --input-border-focus-color: #D8D8D8;
+  --input-border-radius: 0.15rem;
+  --input-error-color: red;
+  --input-padding: 0.75rem;
+  --input-placeholder-color: gray;
+  --input-text-color: black;
+  --input-underline-color: dodgerblue;
+  --laranja-100: #FFF0EB;
+  --laranja-200: #FFD2C4;
+  --laranja-300: #FFB49E;
+  --laranja-400: #FF9677;
+  --laranja-500: #FF7850;
+  --laranja-600: #FF5A29;
+  --laranja-700: #FF3C02;
+  --laranja-800: #DB3200;
+  --laranja-900: #B42900;
+  --purpura-100: #B676CA;
+  --purpura-200: #A85ABF;
+  --purpura-300: #9644AF;
+  --purpura-400: #7E3993;
+  --purpura-500: #662E77;
+  --purpura-600: #4E235B;
+  --purpura-700: #36183F;
+}
+
+*
+{
+  box-sizing: border-box;
+}
+
+*:before,
+*:after
+{
+  box-sizing: inherit;
+}
+
+body,
+caption,
+details,
+div,
+fieldset,
+form,
+caption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+img,
+li,
+ol,
+p,
+summary,
+svg,
+table,
+td,
+th,
+tr,
+ul
+{
+  margin: 0;
+  padding: 0;
+}
+
+html
+{
+  min-height: 100%;
+  position: relative;
+}
+
+body
+{
+  background-color: var(--laranja-200);
+  color: var(--purpura-700);
+  font-family: "Urbanist", sans-serif;
+  font-size: large;
+}
+
+a
+{
+  color: var(--laranja-900);
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: var(--purpura-600);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5
+{
+  margin-bottom: 1.15rem;
+}
+
+p
+{
+  line-height: 1.5em;
+}
+
+nav
+{
+  align-items: center;
+  background-color: var(--purpura-600);
+  border-radius: 20px;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  height: 80px;
+  justify-content: space-around;
+  margin: 10px auto;
+  padding: 20px;
+  width: 95%;
+}
+
+nav img
+{
+  height: 70px;
+  width: auto;
+}
+
+nav ul
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav ul li
+{
+  list-style: none;
+  margin-right: 30px;
+}
+
+nav ul li a
+{
+  color: var(--laranja-200);
+}
+
+nav ul li a:hover
+{
+  background-color: var(--laranja-400);
+  border-radius: 20px;
+  color: var(--purpura-600);
+  padding: 10px;
+}
+
+footer
+{
+  background-color: var(--laranja-900);
+  color: var(--laranja-100);
+  padding: 40px;
+  text-align: center;
+}
+
+/* Saiba mais */
+
+.section-1,
+.section-2,
+.saibamais,
+.contato,
+.quemsomos
+{
+  margin: 30px auto;
+  margin-top:50px;
+  max-width: 1240px;
+}
+
+.section-1 h1
+{
+  font-size: 38px;
+  text-align: center;
+}
+.section-1 h2
+{
+  font-size: 30px;
+  text-align: center;
+}
+
+.section-1 p
+{
+  font-size: 22px;
+  text-align: center;
+}
+
+.section-2 .noticias
+{
+  display: grid;
+  gap: 0 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+}
+
+.section-2 .noticias [class^="noticia-"]
+{
+  align-items: top;
+  background-color: var(--laranja-100);
+  border-radius: 20px;
+  display: auto;
+  grid-template-columns: 320px 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  justify-items: top;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.section-2 .noticias [class^="noticia-"] img
+{
+  border-radius: 30px;
+  height: auto;
+  object-fit: cover;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.section-2 .noticias [class^="noticia-"] .texto
+{
+  padding: 20px;
+}
+
+.section-2 .noticias [class^="noticia-"] .texto h2
+
+{
+  color: var(--laranja-800)
+;
+}
+
+/* Configurar para a página "saibamais.html */
+
+.saibamais p
+{
+  margin-bottom: 2rem;
+}
+
+.saibamais ul li
+{
+  padding: 0.5em;
+}
+
+.saibamais ul li a
+{
+  color: var(--purpura-700);
+}
+
+.saibamais ul li a:hover
+{
+  color: var(--purpura-400);
+}
+
+.footer
+{
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+}
+
+/* Quem somos */
+
+.quemsomos .autores
+{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.quemsomos .autores [class^="autor-"]
+{
+  align-items: center;
+  background-color: var(--purpura-100);
+  border-radius: 20px;
+  color: var(--laranja-200);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 124px 1fr;
+  justify-items: left;
+  padding: 20px;
+}
+
+.quemsomos .autores [class^="autor-"] img
+{
+  border-radius: 50%;
+  height: auto;
+  width: 100%;
+}
+
+.quemsomos .autores [class^="autor-"] .texto
+{
+  color: var(--purpura-500);
+  
+}
+
+.quemsomos .autores [class^="autor-"] .texto a
+{
+  color: var(--purpura-700);
+  
+}
+
+/* Contato */
+
+.contato
+{
+  background-color: var(--laranja-300);
+  border-radius: 20px;
+  margin: 3em auto;
+  padding: 2em;
+  width: 37em;
+}
+
+.contato .intro
+{
+  margin-bottom: 2em;
+}
+
+.contato h1
+{
+  font-size: 1.6em;
+  margin-bottom: 0.6em;
+  text-align: center;
+}
+
+.contato h2
+{
+  font-size: 1.23077em;
+  text-align: center;
+}
+
+input, textarea, button
+{
+  border-radius: 10px;
+  font-family: "Urbanist", sans-serif;
+}
+
+input[type=text]
+{
+  height: 45px;
+}
+
+input[type=text],
+textarea
+{
+  border: none;
+  color: #CFCECE;
+  color: var(--purpura-700);
+  font-size: 0.9em;
+  font-weight: 300;
+  font-weight: 300;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  width: 100%;
+}
+
+input[type=button]
+{
+  background: var(--laranja-900);
+  border: none;
+  color: var(--laranja-100);
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0.5em 2em;
+}
+
+input[type=button]:hover
+{
+  background-color: var(--purpura-700);
+}
+
+@media (min-width: 1440px)
+{
+  .section-1,
+  .section-2,
+  .saibamais,
+  .contato
+  {
+    margin: 30px auto;
+    max-width: 1440px;
+  }
+
+  .quemsomos .autores
+  {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1920px)
+{
+  .section-1,
+  .section-2,
+  .saibamais,
+  .contato
+  {
+    margin: 30px auto;
+    max-width: 1640px;
+  }
+
+  .quemsomos .autores
+  {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
